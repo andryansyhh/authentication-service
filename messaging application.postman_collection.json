@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "efaff83a-7ce0-4cd8-a1ed-6effbdcaade3",
+		"name": "messaging application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15136612",
+		"_collection_link": "https://grey-zodiac-889086.postman.co/workspace/PVP~274f017d-5fce-4027-97cc-885869a89e18/collection/15136612-efaff83a-7ce0-4cd8-a1ed-6effbdcaade3?action=share&source=collection_link&creator=15136612"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ingestion",
+			"item": [
+				{
+					"name": "send message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"content\": \"Hello from client\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9091/api/message",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"api",
+								"message"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sse",
+			"item": [
+				{
+					"name": "get message",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
